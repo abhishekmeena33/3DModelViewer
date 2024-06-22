@@ -67,14 +67,14 @@
         reticle.visible = false;
         scene.add(reticle);
       })  
-      let flower;
-      loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
-        flower = gltf.scene;
+      let khovar;
+      loader.load("https://github.com/abhishekmeena33/3DModelViewer/blob/main/shared-assets/models/khovar.gltf", function(gltf) {
+        khovar = gltf.scene;
       });
 
       session.addEventListener("select", (event) => {
-        if (flower) {
-          const clone = flower.clone();
+        if (khovar) {
+          const clone = khovar.clone();
           clone.position.copy(reticle.position);
           scene.add(clone);
         }
